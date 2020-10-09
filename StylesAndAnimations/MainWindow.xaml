@@ -11,24 +11,20 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="40"></RowDefinition>
             <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="100"></ColumnDefinition>
-            <ColumnDefinition Width="100"></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition Width="Auto"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
 
-        <TextBlock Grid.Row="0" Style="{StaticResource ResourceKey=FormCaptionStyle}">
+        <TextBlock Grid.Row="0" >
             Hello
         </TextBlock>
-        <TextBlock Grid.Row="1">
-            World
-        </TextBlock>
-        <CheckBox Width="70" Grid.Row="1" Grid.Column="1">
-            
+        <CheckBox Width="70" HorizontalAlignment="Left" Grid.Row="1" >
+           
         </CheckBox>
+        <TextBox Grid.Row="2" >
+            World
+        </TextBox>
+        
     </Grid>
 </Window>

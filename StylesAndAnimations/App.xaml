@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:StylesAndAnimations"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <Style TargetType="TextBlock" x:Key="FormCaptionStyle">
+        <Style TargetType="TextBlock">
             <Setter Property="Margin" Value="3,3,3,3"/>
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="true">
@@ -13,7 +13,45 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
+
+        <Style TargetType="CheckBox">
+            <Setter Property="Margin" Value="3,3,3,3"/>
+            <Style.Triggers>
+                <Trigger Property="IsChecked" Value="true">
+                    <Setter Property="Foreground" Value="Green"/>
+                    <Setter Property="Content" Value="Yes"/>
+                </Trigger>
+                <Trigger Property="IsChecked" Value="false">
+                    <Setter Property="Foreground" Value="Red"/>
+                    <Setter Property="Content" Value="No"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="TextBox" >
+            <Setter Property="Margin" Value="3,3,3,3"/>
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="GotFocus">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation To="28" Duration="0:0:0.3" Storyboard.TargetProperty="FontSize" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="LostFocus">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation To="18" Duration="0:0:0.3" Storyboard.TargetProperty="FontSize" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>
+
+       
     </Application.Resources>
+    
+    
     
     
     
